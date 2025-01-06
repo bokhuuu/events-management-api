@@ -100,6 +100,13 @@ services:
             - '/dev/shm:/dev/shm'
         networks:
             - sail
+    adminer:  # Added Adminer service for MySQL management
+        image: adminer
+        restart: always
+        ports:
+            - "8080:8080"  # Adminer will be accessible at http://localhost:8080
+        networks:
+            - sail
 networks:
     sail:
         driver: bridge
