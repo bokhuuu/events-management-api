@@ -15,6 +15,7 @@ class Attendee extends Model
         return $this->belongsTo(User::class);
     }
 
+
     public function event(): BelongsTo
     {
         return $this->belongsTo(Event::class);
